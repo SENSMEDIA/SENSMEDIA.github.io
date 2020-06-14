@@ -1,0 +1,109 @@
+
+#container {
+	width: 500px;
+	margin: auto !important;
+	display: block;
+	height: 500px;
+	position: relative;
+	list-style-type: none;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+.buddy {
+	display: block;
+	background: #fff;
+	border-radius: 10px;
+	box-shadow: 0 0 10px rgba(0,0,0,0.2);
+	color: #fff;
+	padding: 20px;
+	width: 360px;
+	height: 360px;
+	top: 50px;
+	left: 50px;
+	position: absolute;
+	cursor: hand;
+}
+.rotate-right {
+	transform: rotate(30deg) scale(0.8);
+	transition: 1s;
+	margin-left: 400px;
+	cursor: e-resize;
+	opacity: 0;
+	z-index: 10;
+}
+.rotate-left {
+	transform: rotate(-30deg) scale(0.8);
+	transition: 1s;
+	opacity: 0;
+	margin-left: -400px;
+	cursor: w-resize;
+	z-index: 10;
+}
+.avatar {
+	background-color: white;
+	width: 340px;
+	height: 340px;
+	display: block;
+	margin-top: 10px;
+	margin-left: 10px;
+	background-size: contain !important;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+.note {
+	border-radius: 10px;
+	padding: 5px 10px;
+	text-transform: uppercase;
+	font-size: 35px;
+	font-weight: bold;
+	position: absolute;
+	top: 50px;
+	text-shadow: none;
+}
+.like {
+	right: 60px;
+	border: 2px solid green;
+	color: green;
+	transform: rotate(30deg)
+}
+.dislike {
+	left: 60px;
+	border: 2px solid red;
+	color: red;
+	transform: rotate(-30deg)
+}
+
+.centered {
+  position: absolute;
+  top: 85%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: black;
+}
+
+.type {
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid white; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .15em; /* Adjust as needed */
+  animation: 
+    typing 3s steps(40, end),
+    blink-caret .75s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 60% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: white; }
+}
